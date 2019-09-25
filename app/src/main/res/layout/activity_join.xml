@@ -42,19 +42,22 @@
 
     <EditText
         style="@style/edit_style"
+        android:id="@+id/etId"
         android:layout_gravity="center"
         android:background="@drawable/edittext_background"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="비밀번호"
-        style="@style/text_style" />
-    <EditText
+        <TextView
+            style="@style/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호" />
+
+        <EditText
         style="@style/edit_style"
         android:background="@drawable/edittext_background"
         android:layout_gravity="center"
-        android:password="true"/>
+        android:password="true"
+            android:id="@+id/etPassword"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -65,7 +68,8 @@
         style="@style/edit_style"
         android:background="@drawable/edittext_background"
         android:layout_gravity="center"
-        android:password="true"/>
+        android:password="true"
+        android:id="@+id/etCheckPassword"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -76,7 +80,8 @@
     <EditText
         style="@style/edit_style"
         android:background="@drawable/edittext_background"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/etNickname"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -94,14 +99,16 @@
         android:text="남자"
         android:textColor="#555555"
         android:textSize="20dp"
-        android:backgroundTint="#FFFFFF"/>
+        android:backgroundTint="#FFFFFF"
+        android:id="@+id/btnMale"/>
     <Button
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:text="여자"
         android:textColor="#555555"
         android:textSize="20dp"
-        android:backgroundTint="#FFFFFF"/>
+        android:backgroundTint="#FFFFFF"
+        android:id="@+id/btnFemale"/>
 
 
 </LinearLayout>
@@ -111,7 +118,6 @@
         android:layout_height="wrap_content"
         android:text="언제 태어났어요?"
         style="@style/text_style"/>
-
 
         <Spinner
             android:id="@+id/spinenr_year"
@@ -140,6 +146,7 @@
             </Spinner>
 
         <Button
+            android:id="@+id/btn_join_complete"
             android:layout_width="320dp"
             android:layout_height="60dp"
             android:text="가입완료"
