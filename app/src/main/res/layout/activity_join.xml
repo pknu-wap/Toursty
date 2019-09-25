@@ -42,7 +42,10 @@
         style="@style/edit_style"
         android:id="@+id/etId"
         android:layout_gravity="center"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:maxLength="15"
+        android:singleLine="true"
+        android:lines = "1"/>
 
         <TextView
             style="@style/text_style"
@@ -55,7 +58,10 @@
         android:background="@drawable/edittext_background"
         android:layout_gravity="center"
         android:password="true"
-            android:id="@+id/etPassword"/>
+            android:id="@+id/etPassword"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:lines = "1"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -67,7 +73,10 @@
         android:background="@drawable/edittext_background"
         android:layout_gravity="center"
         android:password="true"
-        android:id="@+id/etCheckPassword"/>
+        android:id="@+id/etCheckPassword"
+        android:maxLength="15"
+        android:singleLine="true"
+        android:lines = "1"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -79,7 +88,10 @@
         style="@style/edit_style"
         android:background="@drawable/edittext_background"
         android:layout_gravity="center"
-        android:id="@+id/etNickname"/>
+        android:id="@+id/etNickname"
+        android:maxLength="10"
+        android:singleLine="true"
+        android:lines = "1"/>
 
         <TextView
             android:layout_width="match_parent"
