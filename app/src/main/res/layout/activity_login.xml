@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:hint="아이디를 입력하세요"
         android:layout_gravity="center"
-        android:maxLength="15"
+        android:maxLength="16"
         android:singleLine="true"
         android:lines = "1"/>
 
