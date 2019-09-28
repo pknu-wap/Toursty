@@ -29,6 +29,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btn_login = findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
