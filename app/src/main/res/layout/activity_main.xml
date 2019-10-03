@@ -6,21 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/busan_main"
-            android:scaleType="fitXY"
-            android:layout_marginBottom="10dp"/>
-
-       <ScrollView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,89 +16,246 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/main_su"
-                style="@style/image_view_style"
-                android:src="@drawable/seoul_icon_2"/>
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/suwon"
+                android:scaleType="fitXY"/>
 
-            <ImageView
-                android:id="@+id/main_gg"
-                style="@style/image_view_style"
-                android:src="@drawable/gg_icon"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/main_ic"
-                style="@style/image_view_style"
-                android:src="@drawable/incheon_icon"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/main_gw"
-                style="@style/image_view_style"
-                android:src="@drawable/gangwon_icon"/>
+                <Button
+                    android:id="@+id/f_seoul"
+                    style="@style/fragment_text"
+                    android:text="서울" />
 
-            <ImageView
-                android:id="@+id/dj"
-                style="@style/image_view_style"
-                android:src="@drawable/dj_icon"/>
+                <Button
+                    android:id="@+id/f_gg"
+                    style="@style/fragment_text"
+                    android:text="경기"/>
 
-            <ImageView
-                android:id="@+id/cn"
-                style="@style/image_view_style"
-                android:src="@drawable/cn_icon"/>
+                <Button
+                    android:id="@+id/f_ic"
+                    style="@style/fragment_text"
+                    android:text="인천"/>
 
-            <ImageView
-                android:id="@+id/cb"
-                style="@style/image_view_style"
-                android:src="@drawable/cb_icon"/>
+                <Button
+                    android:id="@+id/f_gw"
+                    style="@style/fragment_text"
+                    android:text="강원"/>
 
-            <ImageView
-                android:id="@+id/gj"
-                style="@style/image_view_style"
-                android:src="@drawable/gj_icon"/>
+                <Button
+                    android:id="@+id/f_dj"
+                    style="@style/fragment_text"
+                    android:text="대전"/>
 
-            <ImageView
-                android:id="@+id/jn"
-                style="@style/image_view_style"
-                android:src="@drawable/jn_icon"/>
+                <Button
+                    android:id="@+id/f_cn"
+                    style="@style/fragment_text"
+                    android:text="충남"/>
 
-            <ImageView
-                android:id="@+id/jb"
-                style="@style/image_view_style"
-                android:src="@drawable/jb_icon"/>
+                <Button
+                    android:id="@+id/f_cb"
+                    style="@style/fragment_text"
+                    android:text="충북"/>
 
-            <ImageView
-                android:id="@+id/dg"
-                style="@style/image_view_style"
-                android:src="@drawable/dg_icon"/>
+                <Button
+                    android:id="@+id/f_gj"
+                    style="@style/fragment_text"
+                    android:text="광주"/>
 
-            <ImageView
-                android:id="@+id/gb"
-                style="@style/image_view_style"
-                android:src="@drawable/gb_icon"/>
+                <Button
+                    android:id="@+id/f_jn"
+                    style="@style/fragment_text"
+                    android:text="전남"/>
 
-            <ImageView
-                android:id="@+id/gn"
-                style="@style/image_view_style"
-                android:src="@drawable/gn_icon"/>
+                <Button
+                    android:id="@+id/f_jb"
+                    style="@style/fragment_text"
+                    android:text="전북"/>
 
-            <ImageView
-                android:id="@+id/us"
-                style="@style/image_view_style"
-                android:src="@drawable/us_icon"/>
+                <Button
+                    android:id="@+id/f_dg"
+                    style="@style/fragment_text"
+                    android:text="대구"/>
 
-            <ImageView
-                android:id="@+id/bs"
-                style="@style/image_view_style"
-                android:src="@drawable/bs_icon"/>
+                <Button
+                    android:id="@+id/f_gb"
+                    style="@style/fragment_text"
+                    android:text="경북"/>
 
-            <ImageView
-                android:id="@+id/jj"
-                style="@style/image_view_style"
-                android:src="@drawable/jj_icon"/>
-            
+                <Button
+                    android:id="@+id/f_gn"
+                    style="@style/fragment_text"
+                    android:text="경남"/>
+
+                <Button
+                    android:id="@+id/f_us"
+                    style="@style/fragment_text"
+                    android:text="울산"/>
+
+                <Button
+                    android:id="@+id/f_bs"
+                    style="@style/fragment_text"
+                    android:text="부산"/>
+
+                <Button
+                    android:id="@+id/f_jj"
+                    style="@style/fragment_text"
+                    android:text="제주"/>
+
+            </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/frame_su"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/grid_su"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:numColumns="2"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_gg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_ic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_gw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_dj"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_cn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_cb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_gj"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_jn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_jb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_dg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_gb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_gn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_bs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:textSize="35dp"
+                            android:text="부산페이지"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_jj"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
 
-       </ScrollView>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </android.support.v4.widget.DrawerLayout>

@@ -98,7 +98,8 @@
         android:textColor="#555555"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFF"
-        android:id="@+id/btnMale"/>
+        android:id="@+id/btnMale"
+        android:fontFamily="@font/bm"/>
     <Button
         android:layout_width="155dp"
         android:layout_height="50dp"
@@ -106,7 +107,8 @@
         android:textColor="#555555"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFF"
-        android:id="@+id/btnFemale"/>
+        android:id="@+id/btnFemale"
+        android:fontFamily="@font/bm"/>
 
 
 </LinearLayout>

@@ -31,7 +31,8 @@
 
             <Button
                 style="@style/drawer_style"
-                android:text="내 정보"/>
+                android:text="내 정보"
+                android:fontFamily="@font/bm"/>
 
 
         </LinearLayout>
@@ -48,7 +49,8 @@
 
             <Button
                 style="@style/drawer_style"
-                android:text="설정" />
+                android:text="설정"
+                android:fontFamily="@font/bm"/>
 
 
         </LinearLayout>
