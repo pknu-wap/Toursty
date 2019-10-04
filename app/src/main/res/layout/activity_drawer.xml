@@ -45,6 +45,24 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:src="@drawable/edit"/>
+
+            <Button
+                style="@style/drawer_style"
+                android:text="리뷰쓰기"
+                android:fontFamily="@font/bm"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/settings"/>
 
             <Button
