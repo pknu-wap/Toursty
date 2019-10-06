@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -32,10 +33,21 @@ public class MainActivity extends AppCompatActivity {
 
     private Button f_bs;
 
+    ImageView bs_main;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bs_main = findViewById(R.id.bs_main);
+        bs_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ReviewBusanActivity.class);
+                startActivity(intent);
+            }
+        });
 
         f_bs = findViewById(R.id.f_bs);
         f_bs.setOnClickListener(new View.OnClickListener() {
