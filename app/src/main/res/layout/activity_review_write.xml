@@ -45,9 +45,20 @@
         </Spinner>
 
         <EditText
+            android:id="@+id/review_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/review_write"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bm"
+            android:maxLength="15"
+            android:hint="제목을 입력해주세요."/>
+
+
+        <EditText
+            android:id="@+id/review_text"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:layout_marginTop="40dp"
             android:background="@drawable/review_write"
             android:fontFamily="@font/bm"
             android:gravity="top"
@@ -79,10 +90,19 @@
             android:background="@drawable/review_write">
 
         </ImageView>
+
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/path"
+        android:text="horolrolrol"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+
     <Button
-        android:layout_marginTop="100dp"
+        android:id="@+id/review_complete_btn"
+        android:layout_marginTop="60dp"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

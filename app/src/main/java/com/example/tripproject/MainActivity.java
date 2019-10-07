@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
     GridView gridView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -58,9 +59,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        toolbar = findViewById(R.id.main_Toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
 
        /* gridView = findViewById(R.id.grid_su);
 
@@ -464,10 +464,20 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.action_review:
+                Intent intent2 = new Intent(getApplicationContext(), ReviewWriteActivity.class);
+                startActivity(intent2);
         }
         return super.onOptionsItemSelected(item);
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.main_toolbar, menu);
+        return true;
     }
 
 }
