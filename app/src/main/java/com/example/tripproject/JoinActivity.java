@@ -38,6 +38,7 @@ public class JoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
+
         etId = (EditText) findViewById(R.id.etId);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etCheckPassword = (EditText) findViewById(R.id.etCheckPassword);
@@ -58,7 +59,6 @@ public class JoinActivity extends AppCompatActivity {
                     case R.id.btnMale:
                         break;
                     case R.id.btn_join_complete:
-
                         String id = etId.getText().toString();
                         String pw = etPassword.getText().toString();
                         String nick = etNickname.getText().toString();

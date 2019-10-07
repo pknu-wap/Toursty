@@ -2,6 +2,7 @@ package com.example.tripproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -61,9 +62,13 @@ public class  MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.main_Toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
 
        /* gridView = findViewById(R.id.grid_su);
-
         MainAdapter adapter = new MainAdapter(MainActivity.this, numberImage);
         gridView.setAdapter(adapter);*/
 
@@ -469,7 +474,6 @@ public class  MainActivity extends AppCompatActivity {
                 startActivity(intent2);
         }
         return super.onOptionsItemSelected(item);
-
 
     }
 

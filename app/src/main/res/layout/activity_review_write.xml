@@ -52,7 +52,8 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/bm"
             android:maxLength="15"
-            android:hint="제목을 입력해주세요."/>
+            android:hint="제목을 입력해주세요."
+            android:layout_marginBottom="5dp"/>
 
 
         <EditText
@@ -94,11 +95,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/path"
-        android:text="horolrolrol"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"/>
 
     <Button
         android:id="@+id/review_complete_btn"

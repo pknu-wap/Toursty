@@ -33,7 +33,6 @@ public class ReviewWriteActivity extends AppCompatActivity {
         final EditText title_id = (EditText)findViewById(R.id.review_title);
         Button button = (Button)findViewById(R.id.review_complete_btn);
 
-        final TextView path = (TextView)findViewById(R.id.path);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +40,6 @@ public class ReviewWriteActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String title = title_id.getText().toString();
                 String text = text_id.getText().toString();
-
-                path.setText(title);
 
                 FileOutputStream fos = null;
                 try {
