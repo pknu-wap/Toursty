@@ -2,7 +2,10 @@ package com.example.tripproject;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +17,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class JoinActivity extends AppCompatActivity {
+
+    String sql;
+    Cursor cursor;
+    SQLiteDatabase database;
+    DatabaseOpenHelper helper;
+    int version = 1;
 
     private EditText etId;
     private EditText etPassword;
@@ -37,6 +46,9 @@ public class JoinActivity extends AppCompatActivity {
         btnMalebutton = (Button) findViewById(R.id.btnMale);
         btnDone = (Button) findViewById(R.id.btn_join_complete);
 
+        helper = new DatabaseOpenHelper(JoinActivity.this, DatabaseOpenHelper.tableName, null, version);
+        database = helper.getWritableDatabase();
+
         Button.OnClickListener onClickListener  = new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +58,10 @@ public class JoinActivity extends AppCompatActivity {
                     case R.id.btnMale:
                         break;
                     case R.id.btn_join_complete:
+
+                        String id = etId.getText().toString();
+                        String pw = etPassword.getText().toString();
+                        String nick = etNickname.getText().toString();
                         if(etId.getText().toString().length() == 0) {
                             Toast.makeText(JoinActivity.this, "아이디를 입력하세요.", Toast.LENGTH_SHORT).show();
                             etId.requestFocus();
@@ -66,10 +82,22 @@ public class JoinActivity extends AppCompatActivity {
                             etNickname.requestFocus();
                             return;
                         }
-                        Intent result = new Intent();
-                        result.putExtra("Id", etId.getText().toString());
-                        setResult(RESULT_OK, result);
-                        finish();
+                        sql = "SELECT id FROM "+ helper.tableName + " WHERE id = '" + id + "'";
+                        cursor = database.rawQuery(sql, null);
+
+                        if(cursor.getCount() != 0){
+                            //존재하는 아이디입니다.
+                            Toast toast = Toast.makeText(JoinActivity.this, "존재하는 아이디입니다.", Toast.LENGTH_SHORT);
+                            toast.show();
+                        }else{
+                            helper.insertUser(database,id,pw,nick);
+                            Toast toast = Toast.makeText(JoinActivity.this, "가입이 완료되었습니다. 로그인을 해주세요.", Toast.LENGTH_SHORT);
+                            toast.show();
+                            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
                 }
             }
         };
@@ -104,6 +132,9 @@ public class JoinActivity extends AppCompatActivity {
 
             }
         });
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
     }
 }

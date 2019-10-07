@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/review_write"
+            android:gravity="center"
+            android:text="리뷰쓰기"
+            android:textSize="30dp"
+            android:fontFamily="@font/bm"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="어느 지역을 여행하셨나요?"
+            android:textSize="20dp"
+            android:fontFamily="@font/bm"/>
+
+        <Spinner
+            android:id="@+id/spinenr_city_review"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/review_write"
+            android:entries="@array/city">
+        </Spinner>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/review_write"
+            android:fontFamily="@font/bm"
+            android:gravity="top"
+            android:hint="여행은 어떠셨나요?"
+            android:maxLength="50"
+            android:maxLines="14" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/review_write"
+            android:src="@drawable/camera">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/review_write">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/review_write">
+
+        </ImageView>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text = "작 성 완 료"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/bm"
+        android:background="#48b8b8"/>
+
+</LinearLayout>
