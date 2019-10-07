@@ -62,6 +62,7 @@ public class JoinActivity extends AppCompatActivity {
                         String id = etId.getText().toString();
                         String pw = etPassword.getText().toString();
                         String nick = etNickname.getText().toString();
+
                         if(etId.getText().toString().length() == 0) {
                             Toast.makeText(JoinActivity.this, "아이디를 입력하세요.", Toast.LENGTH_SHORT).show();
                             etId.requestFocus();
@@ -82,6 +83,7 @@ public class JoinActivity extends AppCompatActivity {
                             etNickname.requestFocus();
                             return;
                         }
+
                         sql = "SELECT id FROM "+ helper.tableName + " WHERE id = '" + id + "'";
                         cursor = database.rawQuery(sql, null);
 
@@ -132,9 +134,6 @@ public class JoinActivity extends AppCompatActivity {
 
             }
         });
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
     }
 }
